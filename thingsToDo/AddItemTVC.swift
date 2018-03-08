@@ -10,16 +10,17 @@ import UIKit
 
 class AddItemTVC: UITableViewController {
 
-    var listOfChores: [String] = []
+    var listOfChores: [String] = ["dishes"]
     
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Add Chore", message: "Name of Chore", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Save", style: .default)
-            let choreName = alert.textFields
-            print(choreName)
-           // listOfChores.append(choreName)
-        //print(listOfChores)
-            
+        let okAction = UIAlertAction(title: "Save", style: .default) { action in
+                
+            var choreName = alert.textFields![0]
+          
+            self.listOfChores.append(choreName.text!)
+            print(self.listOfChores)
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default)
         
         alert.addTextField { (textField: UITextField) in
@@ -35,6 +36,7 @@ class AddItemTVC: UITableViewController {
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
+        
         
     }
     override func viewDidLoad() {
@@ -61,7 +63,7 @@ class AddItemTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "choreCell", for: indexPath)
-
+        cell.textLabel?.text = listOfChores[indexPath.row]
 
         return cell
     }
