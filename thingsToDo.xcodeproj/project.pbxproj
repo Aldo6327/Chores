@@ -14,6 +14,7 @@
 		6A27DD0B202A8AA000947070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A27DD09202A8AA000947070 /* LaunchScreen.storyboard */; };
 		6A27DD16202A8AA000947070 /* thingsToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27DD15202A8AA000947070 /* thingsToDoTests.swift */; };
 		6A27DD21202A8AA000947070 /* thingsToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A27DD20202A8AA000947070 /* thingsToDoUITests.swift */; };
+		6A9349BA20604D1D0067E1B7 /* ChoresTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9349B920604D1D0067E1B7 /* ChoresTVC.swift */; };
 		6AFFE0B6203CDB5E00CCD3ED /* AddItemTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFFE0B5203CDB5E00CCD3ED /* AddItemTVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		6A27DD1C202A8AA000947070 /* thingsToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thingsToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A27DD20202A8AA000947070 /* thingsToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thingsToDoUITests.swift; sourceTree = "<group>"; };
 		6A27DD22202A8AA000947070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A9349B920604D1D0067E1B7 /* ChoresTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresTVC.swift; sourceTree = "<group>"; };
 		6AFFE0B5203CDB5E00CCD3ED /* AddItemTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				6A27DD00202A8AA000947070 /* AppDelegate.swift */,
 				6A27DD02202A8AA000947070 /* ViewController.swift */,
 				6A27DD04202A8AA000947070 /* Main.storyboard */,
+				6A9349B920604D1D0067E1B7 /* ChoresTVC.swift */,
 				6AFFE0B7203CDB6300CCD3ED /* Add Item */,
 				6A27DD07202A8AA000947070 /* Assets.xcassets */,
 				6A27DD09202A8AA000947070 /* LaunchScreen.storyboard */,
@@ -273,6 +276,7 @@
 				6A27DD03202A8AA000947070 /* ViewController.swift in Sources */,
 				6A27DD01202A8AA000947070 /* AppDelegate.swift in Sources */,
 				6AFFE0B6203CDB5E00CCD3ED /* AddItemTVC.swift in Sources */,
+				6A9349BA20604D1D0067E1B7 /* ChoresTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

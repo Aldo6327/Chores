@@ -92,20 +92,33 @@
             <point key="canvasLocation" x="-500" y="-58"/>
         </scene>
         <!--Chores-->
-        <scene sceneID="rQq-GO-b4k">
+        <scene sceneID="R6f-yC-8Ym">
             <objects>
-                <viewController id="FNl-Uu-hVd" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rdj-0T-GPT">
+                <tableViewController id="A7z-0X-MaY" customClass="ChoresTVC" customModule="thingsToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zwc-30-yNp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="d2b-ha-thw"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Chores" id="Bde-9Y-w49"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zrg-zt-Cws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="choresCell" id="2XS-zv-3mr">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2XS-zv-3mr" id="dSB-2H-6Bj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="A7z-0X-MaY" id="dml-k0-3LE"/>
+                            <outlet property="delegate" destination="A7z-0X-MaY" id="OiF-Uo-J0P"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Chores" id="VDw-lA-ahz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0EJ-gn-QBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="829"/>
+            <point key="canvasLocation" x="-1172" y="822"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EqG-bG-qYc">
@@ -117,9 +130,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="FNl-Uu-hVd" kind="relationship" relationship="viewControllers" id="1A8-Tv-u2p"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="FCd-jh-U9o"/>
                         <segue destination="vJ0-3g-qbV" kind="relationship" relationship="viewControllers" id="2rF-3z-KAd"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="FCd-jh-U9o"/>
+                        <segue destination="A7z-0X-MaY" kind="relationship" relationship="viewControllers" id="r1c-0h-23Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZd-Ow-x2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
