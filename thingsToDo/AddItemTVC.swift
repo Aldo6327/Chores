@@ -16,7 +16,7 @@ class AddItemTVC: UITableViewController {
         let alert = UIAlertController(title: "Add Chore", message: "Name of Chore", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Save", style: .default) { action in
                 
-            var choreName = alert.textFields![0]
+            let choreName = alert.textFields![0]
           
             self.listOfChores.append(choreName.text!)
             print(self.listOfChores)
@@ -36,7 +36,7 @@ class AddItemTVC: UITableViewController {
         alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
-        
+        tableView.reloadData()
         
     }
     override func viewDidLoad() {
@@ -64,6 +64,7 @@ class AddItemTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "choreCell", for: indexPath)
         cell.textLabel?.text = listOfChores[indexPath.row]
+       // tableView.reloadData()
 
         return cell
     }
