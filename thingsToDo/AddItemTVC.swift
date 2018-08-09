@@ -19,6 +19,7 @@ class AddItemTVC: UITableViewController {
             let choreName = alert.textFields![0]
           
             self.listOfChores.append(choreName.text!)
+            self.tableView.reloadData()
             print(self.listOfChores)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default)
